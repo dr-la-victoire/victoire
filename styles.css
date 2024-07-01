@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #f3f2e1;
+  color: rgb(44, 42, 42);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: rgb(44, 42, 42);
+}
+
+/* INTRO STYLES */
+.intro {
+  height: 100vh;
+}
+
+/* NAVBAR STYLES */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5em 2em;
+}
+
+.nav-brand {
+  font-size: 1.2rem;
+}
+
+.nav-btn button,
+.contact button,
+.cta-btn button,
+.work-btn button {
+  padding: 1em 2em;
+  background-color: transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+.cta-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-btn button {
+  animation: pop 2s;
+  animation-delay: 3s;
+  animation-iteration-count: 5;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+.nav-btn .btn:hover,
+.contact button:hover,
+.cta-btn button:hover,
+.work-btn button:hover {
+  background-color: rgb(44, 42, 42);
+  border-radius: 30px;
+  color: white;
+}
+
+/* INTRO STYLES */
+.intro-text {
+  width: 80%;
+  margin: 4em auto;
+}
+
+.intro-text h1 {
+  font-size: 50px;
+  line-height: 70px;
+  margin-bottom: 0.2em;
+}
+
+.intro-text h1,
+.intro-text p {
+  position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+  0% {
+    bottom: -500px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+.intro,
+.projects {
+  border-bottom: 1px solid rgb(44, 42, 42, 0.3);
+}
+
+/* PROJECTS STYLES */
+.projects {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.work p {
+  width: 80%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.work-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+.langs {
+  display: block;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+}
+
+.langs p {
+  display: inline;
+}
+
+.langs button {
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 0.5em;
+}
+
+.project-btn {
+  margin-bottom: 1.5em;
+  padding: 0.8em;
+  background-color: transparent;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* CONTACT STYLES */
+.contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact h2 {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.contact button {
+  margin-top: 5em;
+}
+
+.social {
+  font-size: 3rem;
+  word-spacing: 40px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .intro-text {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .work {
+    margin-top: 1.5em;
+  }
+}
