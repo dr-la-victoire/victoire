@@ -16,10 +16,24 @@
 }
 
 /* GENERAL STYLING */
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--primary-text-color);
     font-family: var(--main-font-family);
+}
+
+a {
+    color: var(--primary-text-color);
+    text-decoration: none;
 }
 
 /* HEADER STYLING */
@@ -55,6 +69,7 @@ header {
 .main-container {
     width: 85%;
     margin: 1em auto;
+    max-width: 1320px;
 }
 
 .intro-section {
@@ -84,7 +99,6 @@ header {
 
 .typing-container p {
     font-size: 1.35rem;
-
     border-right: 2px solid var(--secondary-text-color);
     white-space: nowrap;
     overflow: hidden;
@@ -127,4 +141,172 @@ header {
 
 .second-text-container p {
     color: var(--secondary-text-color);
+}
+
+/* SKILLS SECTION STYLING */
+.skills-section {
+    display: flex;
+    gap: 10px;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em auto;
+}
+
+.skills-images-container {
+    background-color: var(--primary-text-color);
+    width: 60%;
+    overflow: hidden;
+    padding: 1em;
+    white-space: nowrap;
+    border-radius: 10px;
+}
+
+.skills-images-content img {
+    width: 60px;
+    height: auto;
+}
+
+.skills-images-content {
+    width: max-content;
+    display: flex;
+    gap: 10px;
+    animation: moveImages 10s linear infinite;
+}
+
+/* ANIMATION TO MOVE IMAGES */
+@keyframes moveImages {
+    from {
+        transform: translateX(-0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.skills-section p {
+    width: 30%;
+}
+
+/* CONTACT LINKS */
+#contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-links,
+.writing-links {
+    width: 85%;
+}
+
+.contact-links a {
+    display: block;
+    padding: 0.3em;
+    font-size: 1.5rem;
+    color: var(--primary-text-color);
+}
+
+/* WRITING LINKS */
+.writing-links {
+    margin-top: 5em;
+    margin-left: -23em;
+}
+
+.writing {
+    display: inline-block;
+}
+
+.writing a {
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    padding: 1em;
+}
+
+/* MAKING IT RESPONSIVE FOR VARIOUS SCREEN SIZES */
+/* EXTRA SMALL SCREENS */
+@media (max-width: 350px) {
+
+    .intro-section,
+    .skills-section {
+        flex-direction: column;
+    }
+
+    .writing-links {
+        margin-top: 12em;
+    }
+
+    .writing-links p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 351px) and (max-width: 380px) {
+    .btn-header {
+        width: 35%;
+    }
+}
+
+@media (min-width: 381px) and (max-width: 480px) {
+    .btn-header {
+        width: 30%;
+    }
+
+    .intro-section,
+    .skills-section {
+        flex-direction: column;
+    }
+
+    .intro-texts {
+        padding-bottom: 0;
+        margin-bottom: 1em;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+
+    .writing-links {
+        margin-left: -15em;
+        margin-right: 1em;
+        margin-bottom: 2em;
+    }
+
+    .writing-links p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .btn-header {
+        width: 30%;
+    }
+
+    .btn-container {
+        width: 40%;
+    }
+
+    .intro-section,
+    .skills-section {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .btn-header {
+        width: 20%;
+    }
+
+    .btn-container {
+        width: 30%;
+    }
+
+    .intro-section,
+    .skills-section {
+        flex-direction: column;
+    }
 }

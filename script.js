@@ -1,4 +1,4 @@
-const words = ["Front-end Web Developer", "Content Writer", "Neuroscientist"];
+const words = ["Front-end Tech Bro", "Content Writer", "Neuroscientist"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
