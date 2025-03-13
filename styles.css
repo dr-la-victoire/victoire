@@ -256,6 +256,19 @@ header {
     .btn-header {
         width: 35%;
     }
+
+    .intro-section,
+    .skills-section {
+        flex-direction: column;
+    }
+
+    .writing-links {
+        margin-top: 12em;
+    }
+
+    .writing-links p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 381px) and (max-width: 480px) {
