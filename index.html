@@ -43,6 +43,15 @@
                     <h2>I'm a front-end web developer and content writer with a serious interest in computational neuroscience.</h2>
                 </div>
                 <p>Need a front-end developer or content writer? I create clean, user-friendly web experiences and engaging content. Let's work together!</p>
+                <a href="#" onclick="openPopUp()">Download CV (PDF)</a>
+                <div class="overlay" id="overlay" onclick="closePopup()"></div>
+                <div class="popup" id="cvPopUp">
+                    <h3>Select a CV:</h3>
+                    <a href="https://docs.google.com/document/d/1VO9IAklvy9XkFdO2ovq9jXTr4ctNv5uA/export?format=pdf" target="_blank">Front-end Web Dev</a>
+                    <a href="https://docs.google.com/document/d/1Hay2ccWyUJWVYdCDSvlzLNSB2sJ5kEv0/export?format=pdf" target="_blank">Content Writing</a>
+                    <br>
+                    <button class="close-btn" onclick="closePopUp()">Close</button>
+                </div>
             </div>
         </section>
         <section class="skills-section">

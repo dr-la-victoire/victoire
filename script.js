@@ -30,3 +30,14 @@ function typingEffect() {
 }
 
 typingEffect();
+
+// Functions to open up the different CVs
+function openPopUp() {
+	document.getElementById("cvPopUp").style.display = "block";
+	document.getElementById("overlay").style.display = "block";
+}
+
+function closePopUp() {
+	document.getElementById("cvPopUp").style.display = "none";
+	document.getElementById("overlay").style.display = "none";
+}
