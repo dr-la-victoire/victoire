@@ -208,6 +208,16 @@ header {
     color: var(--primary-text-color);
 }
 
+.contact-links a,
+.writing a {
+    transition: all 0.3s ease-in;
+}
+
+.contact-links a:hover,
+.writing a:hover {
+    font-size: 1.8rem;
+}
+
 /* WRITING LINKS */
 .writing-links {
     margin-top: 5em;
